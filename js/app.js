@@ -9,6 +9,9 @@ var whoWon = false;
 var blankDiv = document.getElementsByClassName('playSquare');//blank play square
 var messenger = document.getElementById('whosTurn');
 
+
+document.querySelector("input[name=reset]").addEventListener('click', reset);
+ 
 var winner = function(checker){
 	if(playerOnePlaying == true){
 		///////Row combos
@@ -123,12 +126,12 @@ for(var i = 0; i< blankDiv.length;i++){
 		    else if (!playerOnePlaying && whoWon==false){
 			    messenger.innerHTML = "OH OH IT'S MAGIC!";  
 		    }
-		    else if(playerOnePlaying && whoWon == true){
-		    	messenger.innerHTML = "X WINS YUH DIG!!!";
-		    	}
-		    else{
-		    	messenger.innerHTML = "O IS ALL UP IN UR GRILL!!!!";
-		    	}
+		    // else if(playerOnePlaying && whoWon == true){
+		    // 	messenger.innerHTML = "X WINS YUH DIG!!!";
+		    // 	}
+		    // else{
+		    // 	messenger.innerHTML = "O IS ALL UP IN UR GRILL!!!!";
+		    // 	}
 		    }
   		}
 	);
@@ -137,8 +140,16 @@ for(var i = 0; i< blankDiv.length;i++){
 }
 
 function reset(){
-
-
+  for(var i = 0; i < blankDiv.length; i++){
+    blankDiv[i].innerHTML = " ";
+    blankDiv[i].style.backgroundColor = "red";
+    messenger.style.fontSize = "24px";
+    blankDiv[i].hasBeenClicked = false;
+    blankDiv[i].markerValue = "";
+    playerOnePlaying = true;
+    whoWon = false;
+    messenger.innerHTML = "X Gonna Give It To Yuh!";
+  } 
 }
 
 
