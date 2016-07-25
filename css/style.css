@@ -1,3 +1,20 @@
 h1 {
   color: purple;
 }
+section{
+	text-align: center;
+}
+
+.playSquare{
+	background-color: red;
+	border: 1px solid black;
+	width: 150px;
+	height: 150px;
+	margin: 10px;
+	padding: 10px;
+	display: inline-block;
+}
+
+.clearfix{
+	clear: both;
+}
