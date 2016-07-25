@@ -1,8 +1,20 @@
+body{
+	text-align: center;
+	background-color: purple;
+}
+
 h1 {
-  color: purple;
+  color: white;
 }
 section{
 	text-align: center;
+}
+
+img{
+	display: inline-block;
+	width: 150px;
+	height: 150px;
+
 }
 
 .playSquare{
@@ -10,8 +22,7 @@ section{
 	border: 1px solid black;
 	width: 150px;
 	height: 150px;
-	margin: 10px;
-	padding: 10px;
+	
 	display: inline-block;
 }
 
